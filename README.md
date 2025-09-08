@@ -27,11 +27,11 @@ No EULA, no subscription — just pure OSS VerneMQ.
 Clone this repo and build locally:
 
 ```bash
-git clone https://github.com/<your-username>/docker-vernemq.git
+git clone https://github.com/alpamayo-solutions/docker-vernemq.git
 cd docker-vernemq
 
-# Build the image (no subscription required)
-docker build -t my-vernemq:2.1.1 .
+# Build the image 
+docker build -t my-vernemq:2.0.1 .
 ```
 
 ---
@@ -45,7 +45,7 @@ docker run -d --name vernemq \
   -p 1883:1883 \
   -p 8888:8888 \
   -e DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on \
-  my-vernemq:2.1.1
+  my-vernemq:2.0.1
 ```
 
 Check logs:
