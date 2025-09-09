@@ -20,6 +20,8 @@ That means you can run VerneMQ entirely under its **Apache 2.0 license**, withou
 
 No EULA, no subscription — just pure OSS VerneMQ.
 
+If you are confused about the license usage, you can check out this [issue](https://github.com/vernemq/vernemq/issues/1487) for more information.
+
 ---
 
 ## ⬇️ Pull the image
