@@ -32,9 +32,9 @@ docker pull ghcr.io/alpamayo-solutions/vernemq:latest
 
 ## ▶️ Run VerneMQ
 
-```bash
 Start a single-node broker with anonymous access enabled:
 
+```bash
 docker run -d --name vernemq \
   -p 1883:1883 \
   -p 8888:8888 \
