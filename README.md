@@ -4,7 +4,7 @@ This repository is a fork of [vernemq/docker-vernemq](https://github.com/vernemq
 
 The Dockerfile has been modified to **build VerneMQ from source** instead of downloading prebuilt binary tarballs that require a paid subscription.
 
-As of right now, this is the version v2.0.1. After some other stable version is released, this repository will also be updated accordingly.
+As of right now, this is the version **v2.0.1**. After some other stable version is released, this repository will also be updated accordingly.
 
 That means you can run VerneMQ entirely under its **Apache 2.0 license**, without hitting the subscription model.
 
@@ -22,21 +22,15 @@ No EULA, no subscription — just pure OSS VerneMQ.
 
 ---
 
-## 🔨 Build the image
-
-Clone this repo and build locally:
+## ⬇️ Pull the image
 
 ```bash
-git clone https://github.com/alpamayo-solutions/docker-vernemq.git
-cd docker-vernemq
-
-# Build the image 
-docker build -t my-vernemq:2.0.1 .
+docker pull ghcr.io/alpamayo-solutions/vernemq:latest
 ```
 
 ---
 
-▶️ Run VerneMQ
+## ▶️ Run VerneMQ
 
 ```bash
 Start a single-node broker with anonymous access enabled:
@@ -45,7 +39,7 @@ docker run -d --name vernemq \
   -p 1883:1883 \
   -p 8888:8888 \
   -e DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on \
-  my-vernemq:2.0.1
+  ghcr.io/alpamayo-solutions/vernemq:latest
 ```
 
 Check logs:
@@ -60,8 +54,6 @@ docker logs -f vernemq
 
 This fork is meant for OSS usage. If you prefer official, supported binaries, use the subscription-based images
 .
-
-Multi-arch builds (amd64 + arm64) can be done with docker buildx if you need portability.
 
 ---
 
