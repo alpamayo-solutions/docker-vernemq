@@ -1,7 +1,7 @@
 # -------- Build stage --------
 FROM erlang:26 AS build
 
-ARG VERNEMQ_VERSION=2.0.1
+ARG VERNEMQ_VERSION=2.1.1
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       git ca-certificates curl build-essential \
@@ -28,7 +28,11 @@ WORKDIR /vernemq
 
 ENV DOCKER_VERNEMQ_KUBERNETES_LABEL_SELECTOR="app=vernemq" \
     DOCKER_VERNEMQ_LOG__CONSOLE=console \
-    PATH="/vernemq/bin:$PATH"
+    PATH="/vernemq/bin:$PATH" \
+    VERNEMQ_VERSION="2.1.1"
+COPY --chown=10000:10000 bin/vernemq.sh /usr/sbin/start_vernemq
+COPY --chown=10000:10000 bin/join_cluster.sh /usr/sbin/join_cluster
+COPY --chown=10000:10000 files/vm.args /vernemq/etc/vm.args
 
 # --- scripts & config ---
 COPY bin/vernemq.sh /usr/local/bin/start_vernemq
