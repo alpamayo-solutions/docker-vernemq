@@ -1,10 +1,8 @@
-# 🐋 VerneMQ (Open Source Build)
+# 🐋 VerneMQ (License-Free)
 
 This repository is a fork of [vernemq/docker-vernemq](https://github.com/vernemq/docker-vernemq) with one key change:
 
 The Dockerfile has been modified to **build VerneMQ from source** instead of downloading prebuilt binary tarballs that require a paid subscription.
-
-As of right now, this is the version **v2.0.1**. After some other stable version is released, this repository will also be updated accordingly.
 
 That means you can run VerneMQ entirely under its **Apache 2.0 license**, without hitting the subscription model.
 
