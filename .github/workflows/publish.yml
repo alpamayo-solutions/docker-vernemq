@@ -41,7 +41,6 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
           tags: |
             ${{ env.IMAGE_NAME }}:${{ env.TAG }}
             ${{ env.IMAGE_NAME }}:latest
