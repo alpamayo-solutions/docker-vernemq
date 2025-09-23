@@ -66,11 +66,7 @@ docker pull ghcr.io/alpamayo-solutions/vernemq:latest
 Start a single-node broker with anonymous access enabled:
 
 ```bash
-docker run -d --name vernemq \
-  -p 1883:1883 \
-  -p 8888:8888 \
-  -e DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on \
-  ghcr.io/alpamayo-solutions/vernemq:latest
+docker run -d --name vernemq -p 1883:1883 -p 8888:8888 -e DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on ghcr.io/alpamayo-solutions/vernemq:latest
 ```
 
 Check logs:
