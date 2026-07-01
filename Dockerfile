@@ -15,11 +15,11 @@ RUN make rel
 
 
 # -------- Runtime stage --------
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-      bash procps openssl iproute2 curl jq libsnappy-dev net-tools nano ca-certificates && \
+      bash procps openssl iproute2 curl jq libsnappy-dev net-tools nano ca-certificates adduser && \
     rm -rf /var/lib/apt/lists/* && \
     addgroup --gid 10000 vernemq && \
     adduser --uid 10000 --system --ingroup vernemq --home /vernemq --disabled-password vernemq
